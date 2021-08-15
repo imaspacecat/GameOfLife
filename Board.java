@@ -66,7 +66,6 @@ private byte[][] board;
       for(int b = 0; b < board.length; b++){
 
         //add all the neighbor's values together
-        //fix problem where out of scope cause -1
         int liveCount = board[a-1][b-1] + board[a][b-1]
             + board[a+1][b-1] + board[a-1][b] + board[a+1][b] + board[a-1][b+1]
             + board[a][b+1] + board[a+1][b+1];

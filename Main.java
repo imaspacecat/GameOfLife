@@ -6,12 +6,13 @@ class Main {
 
   public static void main(String[] args) throws InterruptedException {
     Board board = new Board(widthX, heightY);
-    seedBoard(board);
+    // seedBoard(board);
     while(true){
+      System.out.println();
       board.printBoard();
       board.checkRules();
       
-      Thread.sleep(500);
+      Thread.sleep(1000);
 
 
 
@@ -36,10 +37,13 @@ class Main {
       int inputY = scanner.nextInt();
 
       board.seed(inputX, inputY);
+      board.printBoard();
+
+      
 
       // System.out.println("Seed again?");
       String inputS = scanner.nextLine();
-      inputS.toLowerCase();
+      // inputS.toLowerCase();
       if(inputS.contains("n")){
         break;
       } else{
